@@ -6,7 +6,7 @@
 
 int main()
 {
-    int server_fd = socket(AF_INET, SOCK_STREAM, 0); // AF_INET -> ipv4, SOCK_STREAM -> tcp, 0 -> auto protocol, socket create a end point for process(non-blocking)
+    int server_fd = socket(AF_INET, SOCK_STREAM, 0); // AF_INET -> ipv4, SOCK_STREAM -> tcp, 0 -> auto protocol, socket create a end point for process(we should make explicitly non-blocking)
     if (server_fd < 0)
     {
         perror("socket");
